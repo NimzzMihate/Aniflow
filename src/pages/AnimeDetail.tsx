@@ -68,11 +68,19 @@ export default function AnimeDetail() {
     .filter((a) => a.id !== anime.id && a.genres.some((g) => anime.genres.includes(g)))
     .slice(0, 6);
 
-  const episodes = Array.from({ length: Math.min(anime.episodes, 12) }, (_, i) => ({
-    number: i + 1,
-    title: `${t("watch.episode")} ${i + 1}`,
-    duration: "24 min",
-  }));
+  // 🔥 HANYA 1 EPISODE (untuk demo)
+  const episodes = [
+    {
+      number: 1,
+      title: `${t("watch.episode")} 1`,
+      duration: anime.type === "Movie" ? "1h 46m" : "24 min",
+    }
+  ];
+
+  // 🔥 TAMPILAN INFO JUMLAH EPISODE (tetap menunjukkan total episode asli)
+  const episodeCount = anime.episodes === 1 
+    ? "Movie" 
+    : `${anime.episodes} ${t("common.eps")}`;
 
   return (
     <Layout>
@@ -121,7 +129,7 @@ export default function AnimeDetail() {
               </div>
               <div className="flex items-center gap-1">
                 <Film className="h-4 w-4" />
-                <span>{anime.episodes} {t("common.eps")}</span>
+                <span>{episodeCount}</span>
               </div>
               <div className="flex items-center gap-1">
                 <Calendar className="h-4 w-4" />
@@ -182,6 +190,22 @@ export default function AnimeDetail() {
             <p className="mt-3 leading-relaxed text-secondary-foreground/80">{synopsis}</p>
 
             <h2 className="mt-10 font-display text-lg font-bold text-foreground">{t("detail.episodes")}</h2>
+            
+            {/* 🔥 INFO TAMBAHAN UNTUK MOVIE ATAU SERIES */}
+            {anime.type === "Movie" ? (
+              <div className="mt-4 rounded-xl border border-border bg-card p-4 text-center">
+                <p className="text-sm text-muted-foreground">
+                  🎬 {t("detail.movieInfo")} — {t("detail.watchNow")}
+                </p>
+              </div>
+            ) : (
+              <div className="mt-4 rounded-xl border border-border bg-card/50 p-3 text-center">
+                <p className="text-xs text-muted-foreground">
+                  ✨ {t("detail.demoEpisode")} {anime.episodes} {t("detail.totalEpisodes")}
+                </p>
+              </div>
+            )}
+
             <div className="mt-4 space-y-2">
               {episodes.map((ep) => (
                 <Link
@@ -213,7 +237,7 @@ export default function AnimeDetail() {
                   [t("detail.studio"), anime.studio],
                   [t("detail.status"), anime.status],
                   [t("detail.season"), `${anime.season} ${anime.year}`],
-                  [t("detail.episodes"), anime.episodes.toString()],
+                  [t("detail.episodes"), anime.type === "Movie" ? "Movie" : `${anime.episodes} ${t("common.eps")}`],
                   [t("detail.rank"), `#${anime.rank}`],
                   [t("detail.popularity"), `#${anime.popularity}`],
                   [t("detail.members"), anime.members.toLocaleString()],
