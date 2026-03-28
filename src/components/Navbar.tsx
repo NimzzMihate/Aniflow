@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, FormEvent } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Search, Menu, X, Play, User, LogOut, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -24,6 +24,16 @@ export default function Navbar() {
   const handleSignOut = async () => {
     await signOut();
     navigate("/");
+  };
+
+  // 🔥 FUNGSI SEARCH YANG BERFUNGSI
+  const handleSearch = (e: FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      navigate(`/browse?q=${encodeURIComponent(searchQuery.trim())}`);
+      setSearchOpen(false);
+      setSearchQuery("");
+    }
   };
 
   return (
@@ -63,20 +73,35 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-2">
+          {/* 🔥 SEARCH FORM - PAKAI FORM BIAR ENTER BISA SEARCH */}
           <AnimatePresence>
             {searchOpen && (
-              <motion.input
+              <motion.form
                 initial={{ width: 0, opacity: 0 }}
                 animate={{ width: 200, opacity: 1 }}
                 exit={{ width: 0, opacity: 0 }}
-                className="rounded-lg border border-border bg-secondary px-3 py-1.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary"
-                placeholder={t("common.search")}
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                autoFocus
-              />
+                onSubmit={handleSearch}
+                className="relative"
+              >
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full rounded-lg border border-border bg-secondary px-3 py-1.5 pr-8 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary"
+                  placeholder={t("common.search")}
+                  autoFocus
+                />
+                <button
+                  type="submit"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                >
+                  <Search className="h-4 w-4" />
+                </button>
+              </motion.form>
             )}
           </AnimatePresence>
+
+          {/* 🔥 TOMBOL SEARCH - SEKARANG BUKA SEARCH FORM */}
           <button
             onClick={() => setSearchOpen(!searchOpen)}
             className="rounded-lg p-2 text-muted-foreground transition-colors hover:text-foreground"
