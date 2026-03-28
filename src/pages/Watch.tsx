@@ -10,7 +10,7 @@ import { useI18n } from "@/lib/i18n";
 // Video sample gratis dari Google (legal untuk demo)
 const episodeVideos: Record<string, Record<number, string>> = {
   "one-punch-man-s3": {
-    1: "https://files.catbox.moe/qlexcn.mp4,
+    1: "https://files.catbox.moe/qlexcn.mp4",
   },
   "pokemon-2024": {
     1: "https://files.catbox.moe/ofanex.mp4",
