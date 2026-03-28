@@ -1,7 +1,7 @@
 import { Play, Info } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import heroImage from "@/assets/hero-anime.jpg";
+const heroImage = "https://files.catbox.moe/kyjkpu.jpg";
 import { animeList, getAnimeTitle, getAnimeSynopsis } from "@/data/animeData";
 import { useI18n } from "@/lib/i18n";
 
