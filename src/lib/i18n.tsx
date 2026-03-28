@@ -51,6 +51,10 @@ const translations: Record<Language, Record<string, string>> = {
     "browse.sortNewest": "Newest",
     "browse.sortTitle": "Title",
     "browse.noResults": "No anime found matching your filters.",
+    "browse.searchResults": "Search results for",
+    "browse.clearSearch": "Clear search",
+    "browse.showing": "Showing",
+    "browse.results": "results",
     // Rankings
     "rankings.title": "Anime Rankings",
     "rankings.subtitle": "The best anime ranked by our community",
@@ -73,6 +77,10 @@ const translations: Record<Language, Record<string, string>> = {
     "detail.addToList": "Add to List",
     "detail.removeFromList": "Remove",
     "detail.related": "You Might Also Like",
+    "detail.movieInfo": "This is a movie, watch the full film",
+    "detail.watchNow": "Watch now",
+    "detail.demoEpisode": "✨ Demo version: Only Episode 1 is available. The full anime has",
+    "detail.totalEpisodes": "episodes",
     // Watch
     "watch.episode": "Episode",
     "watch.nextEp": "Next Episode",
@@ -144,6 +152,10 @@ const translations: Record<Language, Record<string, string>> = {
     "browse.sortNewest": "Terbaru",
     "browse.sortTitle": "Judul",
     "browse.noResults": "Tidak ada anime yang sesuai filter.",
+    "browse.searchResults": "Hasil pencarian untuk",
+    "browse.clearSearch": "Hapus pencarian",
+    "browse.showing": "Menampilkan",
+    "browse.results": "hasil",
     "rankings.title": "Peringkat Anime",
     "rankings.subtitle": "Anime terbaik menurut komunitas kami",
     "rankings.topRated": "Rating Tertinggi",
@@ -164,6 +176,10 @@ const translations: Record<Language, Record<string, string>> = {
     "detail.addToList": "Tambah ke Daftar",
     "detail.removeFromList": "Hapus",
     "detail.related": "Mungkin Kamu Suka",
+    "detail.movieInfo": "Ini adalah film, tonton full filmnya",
+    "detail.watchNow": "Tonton sekarang",
+    "detail.demoEpisode": "✨ Versi demo: Hanya Episode 1 yang tersedia. Total anime memiliki",
+    "detail.totalEpisodes": "episode",
     "watch.episode": "Episode",
     "watch.nextEp": "Episode Selanjutnya",
     "watch.prevEp": "Episode Sebelumnya",
@@ -228,6 +244,10 @@ const translations: Record<Language, Record<string, string>> = {
     "browse.sortNewest": "最新",
     "browse.sortTitle": "タイトル",
     "browse.noResults": "条件に合うアニメが見つかりませんでした。",
+    "browse.searchResults": "検索結果",
+    "browse.clearSearch": "検索をクリア",
+    "browse.showing": "表示中",
+    "browse.results": "件",
     "rankings.title": "アニメランキング",
     "rankings.subtitle": "コミュニティが選んだ最高のアニメ",
     "rankings.topRated": "高評価",
@@ -248,6 +268,10 @@ const translations: Record<Language, Record<string, string>> = {
     "detail.addToList": "リストに追加",
     "detail.removeFromList": "削除",
     "detail.related": "おすすめ",
+    "detail.movieInfo": "これは映画です。全編をご覧ください",
+    "detail.watchNow": "今すぐ見る",
+    "detail.demoEpisode": "✨ デモ版: エピソード1のみ利用可能。全",
+    "detail.totalEpisodes": "エピソード",
     "watch.episode": "エピソード",
     "watch.nextEp": "次のエピソード",
     "watch.prevEp": "前のエピソード",
@@ -312,6 +336,10 @@ const translations: Record<Language, Record<string, string>> = {
     "browse.sortNewest": "최신",
     "browse.sortTitle": "제목",
     "browse.noResults": "필터에 맞는 애니메이션이 없습니다.",
+    "browse.searchResults": "검색 결과",
+    "browse.clearSearch": "검색 지우기",
+    "browse.showing": "표시 중",
+    "browse.results": "개 결과",
     "rankings.title": "애니메이션 랭킹",
     "rankings.subtitle": "커뮤니티가 선정한 최고의 애니메이션",
     "rankings.topRated": "최고 평점",
@@ -332,6 +360,10 @@ const translations: Record<Language, Record<string, string>> = {
     "detail.addToList": "목록에 추가",
     "detail.removeFromList": "제거",
     "detail.related": "추천 애니메이션",
+    "detail.movieInfo": "영화입니다. 전체 영화를 시청하세요",
+    "detail.watchNow": "지금 시청",
+    "detail.demoEpisode": "✨ 데모 버전: 1화만 제공됩니다. 총",
+    "detail.totalEpisodes": "화",
     "watch.episode": "에피소드",
     "watch.nextEp": "다음 에피소드",
     "watch.prevEp": "이전 에피소드",
@@ -367,54 +399,6 @@ const translations: Record<Language, Record<string, string>> = {
     "common.eps": "화",
   },
 };
-
-// English (en)
-"browse.searchResults": "Search results for",
-"browse.clearSearch": "Clear search",
-"browse.showing": "Showing",
-"browse.results": "results",
-
-// Indonesian (id)
-"browse.searchResults": "Hasil pencarian untuk",
-"browse.clearSearch": "Hapus pencarian",
-"browse.showing": "Menampilkan",
-"browse.results": "hasil",
-
-// Japanese (ja)
-"browse.searchResults": "検索結果",
-"browse.clearSearch": "検索をクリア",
-"browse.showing": "表示中",
-"browse.results": "件",
-
-// Korean (ko)
-"browse.searchResults": "검색 결과",
-"browse.clearSearch": "검색 지우기",
-"browse.showing": "표시 중",
-"browse.results": "개 결과",
-
-// English (en)
-"detail.movieInfo": "This is a movie, watch the full film",
-"detail.watchNow": "Watch now",
-"detail.demoEpisode": "✨ Demo version: Only Episode 1 is available. The full anime has",
-"detail.totalEpisodes": "episodes",
-
-// Indonesian (id)
-"detail.movieInfo": "Ini adalah film, tonton full filmnya",
-"detail.watchNow": "Tonton sekarang",
-"detail.demoEpisode": "✨ Versi demo: Hanya Episode 1 yang tersedia. Total anime memiliki",
-"detail.totalEpisodes": "episode",
-
-// Japanese (ja)
-"detail.movieInfo": "これは映画です。全編をご覧ください",
-"detail.watchNow": "今すぐ見る",
-"detail.demoEpisode": "✨ デモ版: エピソード1のみ利用可能。全",
-"detail.totalEpisodes": "エピソード",
-
-// Korean (ko)
-"detail.movieInfo": "영화입니다. 전체 영화를 시청하세요",
-"detail.watchNow": "지금 시청",
-"detail.demoEpisode": "✨ 데모 버전: 1화만 제공됩니다. 총",
-"detail.totalEpisodes": "화",
 
 interface I18nContextType {
   language: Language;
