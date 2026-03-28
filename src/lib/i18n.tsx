@@ -368,6 +368,54 @@ const translations: Record<Language, Record<string, string>> = {
   },
 };
 
+// English (en)
+"browse.searchResults": "Search results for",
+"browse.clearSearch": "Clear search",
+"browse.showing": "Showing",
+"browse.results": "results",
+
+// Indonesian (id)
+"browse.searchResults": "Hasil pencarian untuk",
+"browse.clearSearch": "Hapus pencarian",
+"browse.showing": "Menampilkan",
+"browse.results": "hasil",
+
+// Japanese (ja)
+"browse.searchResults": "検索結果",
+"browse.clearSearch": "検索をクリア",
+"browse.showing": "表示中",
+"browse.results": "件",
+
+// Korean (ko)
+"browse.searchResults": "검색 결과",
+"browse.clearSearch": "검색 지우기",
+"browse.showing": "표시 중",
+"browse.results": "개 결과",
+
+// English (en)
+"detail.movieInfo": "This is a movie, watch the full film",
+"detail.watchNow": "Watch now",
+"detail.demoEpisode": "✨ Demo version: Only Episode 1 is available. The full anime has",
+"detail.totalEpisodes": "episodes",
+
+// Indonesian (id)
+"detail.movieInfo": "Ini adalah film, tonton full filmnya",
+"detail.watchNow": "Tonton sekarang",
+"detail.demoEpisode": "✨ Versi demo: Hanya Episode 1 yang tersedia. Total anime memiliki",
+"detail.totalEpisodes": "episode",
+
+// Japanese (ja)
+"detail.movieInfo": "これは映画です。全編をご覧ください",
+"detail.watchNow": "今すぐ見る",
+"detail.demoEpisode": "✨ デモ版: エピソード1のみ利用可能。全",
+"detail.totalEpisodes": "エピソード",
+
+// Korean (ko)
+"detail.movieInfo": "영화입니다. 전체 영화를 시청하세요",
+"detail.watchNow": "지금 시청",
+"detail.demoEpisode": "✨ 데모 버전: 1화만 제공됩니다. 총",
+"detail.totalEpisodes": "화",
+
 interface I18nContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
